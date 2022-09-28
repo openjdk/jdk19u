@@ -43,8 +43,6 @@ public class CmpUWithZero {
     }
 
     @Test
-    @IR(counts = { IRNode.CMP_I, "1" })
-    @IR(failOn = { IRNode.CMP_U})
     public static void test(int x) {
         if (Integer.compareUnsigned(x, 1) < 0) {
             field = true;
